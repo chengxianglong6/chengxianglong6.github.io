@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="redis安装启动1.安装redis需要c语言的编译环境。如果没有gcc需要在线安装。 1yum install gcc-c++">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-17T04:37:00.895Z">
+<meta property="og:updated_time" content="2019-12-08T12:41:36.220Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -171,26 +171,26 @@
 
 <p>4.进入解压后的redis文件夹中，然后使用“<strong>make</strong>”命令编译</p>
 <p>5.安装redis</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao redis-3.0.0]# make install PREFIX=/usr/local/redis</span><br><span class="line"><span class="comment">//PREFIX指定redis要安装的目录</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> make install PREFIX=/usr/local/redis</span><br><span class="line"><span class="comment">//PREFIX指定redis要安装的目录</span></span><br></pre></td></tr></table></figure>
 
 <p>6.启动redis</p>
 <p>前台启动：在redis的安装目录下直接启动redis-server（一直处于启动页面，如果退出将会终止redis，不推荐）</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# ./redis-server</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./redis-server</span><br></pre></td></tr></table></figure>
 
 <p>后台启动：（推荐）</p>
 <p>把redis-3.0.0/redis.conf（解压后的redis目录下）复制到/usr/local/redis/bin（redis的安装目录下）目录下</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost redis-3.0.0]# cp redis.conf    /usr/local/redis/bin/</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp redis.conf    /usr/local/redis/bin/</span><br></pre></td></tr></table></figure>
 
 <p>然后更改redis.conf文件，daemonize  no 改为 daemonize  yes</p>
 <p>（redis采用的是单进程多线程的模式。当redis.conf中选项daemonize设置成yes时，代表开启守护进程模式。在该模式下，redis会在后台运行，并将进程pid号写入至redis.conf选项pidfile设置的文件中，此时redis将一直运行，除非手动kill该进程。但当daemonize选项设置成no时，当前界面将进入redis的命令行界面，exit强制退出或者关闭连接工具(putty,xshell等)都会导致redis进程退出。<br>服务端开发的大部分应用都是采用后台运行的模式）</p>
 <p>最后就可以启动redis了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# ./redis-server redis.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/redis-server redis.conf</span><br></pre></td></tr></table></figure>
 
 <p>7.查看redis进程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost bin]# ps aux|grep redis</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux|grep redis</span><br></pre></td></tr></table></figure>
 
 <p>8.redis客户端连接服务端</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//默认使用127.0.0.1 6379端口</span></span><br><span class="line">[root@localhost bin]# ./redis-cli</span><br><span class="line"><span class="comment">//-h：连接的服务器的地址   -p：服务的端口号</span></span><br><span class="line">[root@localhost bin]# ./redis-cli -h 192.168.25.153 -p 6379</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//默认使用127.0.0.1 6379端口</span></span><br><span class="line">bin/redis-cli</span><br><span class="line"><span class="comment">//-h：连接的服务器的地址   -p：服务的端口号</span></span><br><span class="line">bin/redis-cli -h <span class="number">192.168</span><span class="number">.25</span><span class="number">.153</span> -p <span class="number">6379</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="Redis的五种基本数据类型"><a href="#Redis的五种基本数据类型" class="headerlink" title="Redis的五种基本数据类型"></a>Redis的五种基本数据类型</h5><p>redis是以 key / value 形式存储数据的，数据类型指的是value的数据类型</p>
 <p>redis中所有数据都是字符串类型</p>
@@ -215,36 +215,36 @@
 <p>搭建伪分布式。可以使用一台虚拟机运行6个redis实例。需要修改redis的端口号7001-7006</p>
 <p>1，在usr/local目录下创建目录redis-cluster</p>
 <p>2，进入前面安装好的redis目录，复制bin目录到/usr/local/redis-cluster目录下</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao redis]# cp -r bin /usr/local/redis-cluster/redis01</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r bin /usr/local/redis-cluster/redis01</span><br></pre></td></tr></table></figure>
 
 <p>3，进入到复制好的redis01的bin目录，删除 dump.rdb 和 appendonly.aof 以保证节点是新的。然后修改redis.conf配置文件，修改port为7001；再<strong>去掉 #cluster-enabled yes 的注释</strong>(大约632行)，以便搭建集群</p>
 <p>4，按照2，3两个步骤，复制共六份，端口分别改为（7001，7002，7003，7004，7005，7006）</p>
 <p>5，编写一个批处理，让六个redis依次启动</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao redis-cluster]# vi start-all.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi start-all.sh</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//批处理的代码</span></span><br><span class="line">cd redis01</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis02</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis03</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis04</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis05</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis06</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br></pre></td></tr></table></figure>
 
 <p>此时的 start-all.sh 文件只是一个普通的文件，通过下面的代码将它改为可执行文件</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao redis-cluster]# chmod u+x start-all.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod u+x start-all.sh</span><br></pre></td></tr></table></figure>
 
 <p>6，执行批处理文件，启动六个redis</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao redis-cluster]# ./start-all.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./start-all.sh</span><br></pre></td></tr></table></figure>
 
 <p><strong>安装运行环境</strong></p>
 <p>1，进入之前解压的redis-3.0.0目录，复制src目录下的 redis-trib.rb 到 redis-cluster 集群目录下</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao src]# cp redis-trib.rb /usr/local/redis-cluster/</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp redis-trib.rb /usr/local/redis-cluster/</span><br></pre></td></tr></table></figure>
 
 <p>2，使用ruby脚本搭建集群。需要在线安装ruby的运行环境：</p>
 <p>yum install ruby</p>
 <p>yum install rubygems</p>
 <p>3，要运行 redis-trib.rb 脚本需要安装ruby脚本运行使用的包。</p>
 <p>先把redis-3.0.0.gem传到linux中，然后进行安装：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao local]# gem install redis-3.0.0.gem</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install redis-<span class="number">3.0</span><span class="number">.0</span>.gem</span><br></pre></td></tr></table></figure>
 
 <p>4，安装完成之后就可以使用ruby脚本搭建集群了</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao redis-cluster]# ./redis-trib.rb create --replicas 1 192.168.25.16:7001 192.168.25.16:7002 192.168.25.16:7003 192.168.25.16:7004 192.168.25.16:7005 192.168.25.16:7006</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./redis-trib.rb create --replicas <span class="number">1</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7001</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7002</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7003</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7004</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7005</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7006</span></span><br></pre></td></tr></table></figure>
 
-<h5 id="使用集群"><a href="#使用集群" class="headerlink" title="使用集群"></a>使用集群</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao redis-cluster]# redis01/redis-cli -p 7001 -c</span><br><span class="line"><span class="comment">//-c：代表连接的是redis集群</span></span><br></pre></td></tr></table></figure>
+<h5 id="使用集群"><a href="#使用集群" class="headerlink" title="使用集群"></a>使用集群</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis01/redis-cli -p <span class="number">7001</span> -c</span><br><span class="line"><span class="comment">//-c：代表连接的是redis集群</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="java使用redis"><a href="#java使用redis" class="headerlink" title="java使用redis"></a>java使用redis</h5><p>首先需要导入jedis jar包</p>
 <p>spring 配置，单机版和集群不能共存，开发的时候一般用单机版，发布的时候用集群版</p>

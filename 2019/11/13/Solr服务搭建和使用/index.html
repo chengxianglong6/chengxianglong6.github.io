@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Solr搭建1.首先安装jdk 2.把 solr 包上传到Linux，并解压：tar zxf solr-4.10.3.tgz.tgz">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-17T04:36:50.860Z">
+<meta property="og:updated_time" content="2019-12-08T12:44:00.148Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -166,49 +166,49 @@
 
 <p>3.上传tomcat 包，并解压：tar zxf apache-tomcat-7.0.47.tar.gz</p>
 <p>4.创建目录 solr</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao local]# mkdir solr</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir solr</span><br></pre></td></tr></table></figure>
 
 <p>把解压后的 tomcat 复制到新创建的 solr 目录下</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao local]# cp apache-tomcat-7.0.47 solr/tomcat -r</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp apache-tomcat-<span class="number">7.0</span><span class="number">.47</span> solr/tomcat -r</span><br></pre></td></tr></table></figure>
 
 <p>把解压后的 solr-4.10.3 /dist 目录下的 solr.war包部署到 tomcat webapps 目录下</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao local]# cp solr-4.10.3/dist/solr-4.10.3.war solr/tomcat/webapps/solr.war</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp solr-<span class="number">4.10</span><span class="number">.3</span>/dist/solr-<span class="number">4.10</span><span class="number">.3</span>.war solr/tomcat/webapps/solr.war</span><br></pre></td></tr></table></figure>
 
 <p>5.启动 tomcat（让tomcat 解压缩 solr.war 包）</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao tomcat]# bin/startup.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/startup.sh</span><br></pre></td></tr></table></figure>
 
 <p>查看 tomcat 启动日志</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao tomcat]# tail -f logs/catalina.out</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f logs/catalina.out</span><br></pre></td></tr></table></figure>
 
 <p>然后关闭tomcat</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao tomcat]# bin/shutdown.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/shutdown.sh</span><br></pre></td></tr></table></figure>
 
 <p>进入tomcat/webapps目录下就可以看到解压之后的solr,最后把之前放进来的solr.war删除</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao webapps]# rm -f solr.war</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f solr.war</span><br></pre></td></tr></table></figure>
 
 <p>6.进入之前解压的 solr-4.10.3 目录，进入example / lib / ext 目录，复制所有的jar包到 tomcat里部署的solr 里</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao ext]# cp * /usr/local/solr/tomcat/webapps/solr/WEB-INF/lib/</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp * /usr/local/solr/tomcat/webapps/solr/WEB-INF/lib/</span><br></pre></td></tr></table></figure>
 
 <p>以上的是solr 运行要用到的 jar包</p>
 <p>7.创建 solrhome 目录，直接复制 /usr/local/solr-4.10.3/example 目录下的 solr 作为solrhome</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao example]# cp -r solr /usr/local/solr/solrhome</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r solr /usr/local/solr/solrhome</span><br></pre></td></tr></table></figure>
 
 <p>然后修改 /usr/local/solr/tomcat/webapps/solr/WEB-INF/web.xml，去掉下面代码的注释，把路径改为刚复制的solrhome</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;env-entry&gt;</span><br><span class="line">   &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</span><br><span class="line">   &lt;env-entry-value&gt;/usr/local/solr/solrhome&lt;/env-entry-value&gt;</span><br><span class="line">   &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</span><br><span class="line">&lt;/env-entry&gt;</span><br></pre></td></tr></table></figure>
 
 <p>8.启动 tomcat 即可</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao tomcat]# bin/startup.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/startup.sh</span><br></pre></td></tr></table></figure>
 
 <p>访问 192.168.25.16:8080/solr</p>
 <h5 id="Solr使用"><a href="#Solr使用" class="headerlink" title="Solr使用"></a>Solr使用</h5><p>1.创建对应的业务域,需要制定中文分析器。</p>
 <p>把IK Analyzer 2012FF_hf1文件夹上传到Linux中，然后进入文件夹复制IKAnalyzer2012FF_u1.jar 包到solr lib下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao IK Analyzer 2012FF_hf1]# </span><br><span class="line">cp IKAnalyzer2012FF_u1.jar /usr/local/solr/tomcat/webapps/solr/WEB-INF/lib</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp IKAnalyzer2012FF_u1.jar /usr/local/solr/tomcat/webapps/solr/WEB-INF/lib</span><br></pre></td></tr></table></figure>
 
 <p>创建一个classes文件夹，然后复制中文解析器的配置文件到classes文件夹中</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao IK Analyzer 2012FF_hf1]# mkdir /usr/local/solr/tomcat/webapps/solr/WEB-INF/classes</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/solr/tomcat/webapps/solr/WEB-INF/classes</span><br></pre></td></tr></table></figure>
 
 <p>复制配置文件</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@weitao IK Analyzer 2012FF_hf1]# cp ext_stopword.dic IKAnalyzer.cfg.xml mydict.dic /usr/local/solr/tomcat/webapps/solr/WEB-INF/classes/</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ext_stopword.dic IKAnalyzer.cfg.xml mydict.dic /usr/local/solr/tomcat/webapps/solr/WEB-INF/classes/</span><br></pre></td></tr></table></figure>
 
 <p>2.配置一个FieldType，指定使用IKAnalyzer</p>
 <p>修改 /usr/local/solr/solrhome/collection1/conf/schema.xml ，在文件最后面加上：</p>
@@ -231,11 +231,11 @@
 <h5 id="Solr集群搭建（SolrCloud）"><a href="#Solr集群搭建（SolrCloud）" class="headerlink" title="Solr集群搭建（SolrCloud）"></a>Solr集群搭建（SolrCloud）</h5><h6 id="首先搭建zookeeper集群"><a href="#首先搭建zookeeper集群" class="headerlink" title="首先搭建zookeeper集群"></a>首先搭建zookeeper集群</h6><p>至少搭建3个节点，伪分布式集群搭建</p>
 <p>1.创建solr-cloud目录  [root@weitao local]# mkdir solr-cloud/</p>
 <p>2.复制三份zookeeper到solr-cloud目录下</p>
-<p>[root@weitao local]# cp -r /home/cxl/app/zookeeper-3.4.6     /usr/local/solr-cloud/zookeeper01</p>
-<p>[root@weitao local]# cp -r /home/cxl/app/zookeeper-3.4.6     /usr/local/solr-cloud/zookeeper02</p>
-<p>[root@weitao local]# cp -r /home/cxl/app/zookeeper-3.4.6     /usr/local/solr-cloud/zookeeper03</p>
-<p>3.进入zookeeper01目录，创建data目录     [root@weitao zookeeper01]# mkdir data   </p>
-<p>4.在data目录下创建myid文件，文件内容写1      [root@weitao data]# vi myid</p>
+<p>cp -r /home/cxl/app/zookeeper-3.4.6     /usr/local/solr-cloud/zookeeper01</p>
+<p>cp -r /home/cxl/app/zookeeper-3.4.6     /usr/local/solr-cloud/zookeeper02</p>
+<p>cp -r /home/cxl/app/zookeeper-3.4.6     /usr/local/solr-cloud/zookeeper03</p>
+<p>3.进入zookeeper01目录，创建data目录     mkdir data   </p>
+<p>4.在data目录下创建myid文件，文件内容写1       vi myid</p>
 <p>5.进入zookeeper01的conf目录下，重命名zoo_sample.cfg为zoo.cfg，然后修改zoo.cfg</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//修改data所在路径和zookeeper启动服务的端口号</span></span><br><span class="line">dataDir=/usr/local/solr-cloud/zookeeper01/data <span class="comment">//前面创建的data目录</span></span><br><span class="line">clientPort=<span class="number">2181</span></span><br><span class="line"><span class="comment">//在文件的最后加上：</span></span><br><span class="line">server<span class="number">.1</span>=<span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">2881</span>:<span class="number">3881</span></span><br><span class="line">server<span class="number">.2</span>=<span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">2882</span>:<span class="number">3882</span></span><br><span class="line">server<span class="number">.3</span>=<span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">2883</span>:<span class="number">3883</span></span><br></pre></td></tr></table></figure>
 
@@ -245,7 +245,7 @@
 
 <p>通过 chmod u+x start-all.sh 命令将start-all.sh 赋权限为可执行文件</p>
 <p>最后启动zookeeper集群 ./start-sll.sh</p>
-<p>[root@solrcloud solr-cloud]# zookeeper03/bin/zkServer.sh status  查看zookeeper状态</p>
+<p> zookeeper03/bin/zkServer.sh status  查看zookeeper状态</p>
 <h6 id="开始搭建solr集群"><a href="#开始搭建solr集群" class="headerlink" title="开始搭建solr集群"></a>开始搭建solr集群</h6><p>1.复制四份tomcat到solr-cloud目录下，分别修改四个tomcat的端口号</p>
 <p>2.复制之前搭建的单机版solr中的 tomcat/webapps/solr 到刚创建的每一个tomcat/webapp下</p>
 <p>3.复制之前搭建的单机版solr中的 solrhome 到刚创建的solr-cloud目录下，复制四份</p>
@@ -261,24 +261,24 @@
 <p>添加到opts下面，大概在236行</p>
 <p>6.进入 /usr/local/solr-4.10.3/example/scripts/cloud-scripts 目录</p>
 <p>让zookeeper统一管理配置文件。需要把solrhome/collection1/conf目录上传到zookeeper。上传任意一个solrhome中的conf下的配置文件即可。使用zookeeper客户端进行上传</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="meta">@weitao</span> cloud-scripts]./zkcli.sh -zkhost <span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2181</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2182</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2183</span> -cmd upconfig -confdir /usr/local/solr-cloud/solrhome01/collection1/conf -confname myconf</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkcli.sh -zkhost <span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2181</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2182</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2183</span> -cmd upconfig -confdir /usr/local/solr-cloud/solrhome01/collection1/conf -confname myconf</span><br></pre></td></tr></table></figure>
 
 <p>7.通过zookeeper客户端连接集群</p>
-<p>[root@solrcloud bin]# ./zkCli.sh</p>
+<p> ./zkCli.sh</p>
 <p>可以指定连接到哪个节点：[root@solrcloud bin]# ./zkCli.sh -server 192.168.25.67:2182</p>
 <p>8.启动四个tomcat</p>
 <p>编写一个可执行文件用于启动四个tomcat</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/solr-cloud/tomcat01/bin</span><br><span class="line">./startup.sh</span><br><span class="line">cd /usr/local/solr-cloud/tomcat02/bin</span><br><span class="line">./startup.sh </span><br><span class="line">cd /usr/local/solr-cloud/tomcat03/bin</span><br><span class="line">./startup.sh </span><br><span class="line">cd /usr/local/solr-cloud/tomcat04/bin</span><br><span class="line">./startup.sh</span><br></pre></td></tr></table></figure>
 
 <p>赋权限：chmod u+x start-tomcat-all.sh</p>
-<p>启动：[root@solrcloud solr-cloud]# ./start-tomcat-all.sh </p>
-<p>查看启动日志:[root@solrcloud solr-cloud]# tail -f tomcat04/logs/catalina.out </p>
+<p>启动：./start-tomcat-all.sh </p>
+<p>查看启动日志: tail -f tomcat04/logs/catalina.out </p>
 <p>9.浏览器访问集群</p>
 <p>10.添加collection语句，直接在浏览器地址栏输入即可</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//192.168.25.154:8180/solr/admin/collections?action=CREATE&amp;name=collection2&amp;numShards=2&amp;replicationFactor=2</span></span><br></pre></td></tr></table></figure>
 
 <p>如果向索引库中添加数据，运行时出现找不到field的错误，需要把colllection1下的conf目录复制到collection2下，再用zookeeper客户端把conf上传到zookeeper中进行管理（<strong><em>一般情况下不需要这步，都是正常的</em></strong>）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root<span class="meta">@weitao</span> cloud-scripts]./zkcli.sh -zkhost <span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2181</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2182</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2183</span> -cmd upconfig -confdir /usr/local/solr-cloud/solrhome01/collection2/conf -confname myconf</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkcli.sh -zkhost <span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2181</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2182</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2183</span> -cmd upconfig -confdir /usr/local/solr-cloud/solrhome01/collection2/conf -confname myconf</span><br></pre></td></tr></table></figure>
 
 <p>11.删除不用的Collection</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//192.168.25.154:8180/solr/admin/collections?action=DELETE&amp;name=collection1</span></span><br></pre></td></tr></table></figure>

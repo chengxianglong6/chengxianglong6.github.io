@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="1.虚拟机需要联网在线安装C语言环境 1yum install gcc-c++">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-17T04:37:10.106Z">
+<meta property="og:updated_time" content="2019-12-08T12:39:17.091Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -169,25 +169,25 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install -y pcre pcre-devel</span><br><span class="line">yum install -y zlib zlib-devel</span><br><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
 
 <p>3.把nginx的源码包上传到linux系统</p>
-<p>4.[root@localhost ~]# tar zxf nginx-1.8.0.tar.gz </p>
+<p>4.解压 tar zxf nginx-1.8.0.tar.gz </p>
 <p>5.进入解压后的nginx目录，使用configure命令创建一makeFile文件。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">./configure \</span><br><span class="line">--prefix=/usr/local/nginx \</span><br><span class="line">--pid-path=/<span class="keyword">var</span>/run/nginx/nginx.pid \</span><br><span class="line">--lock-path=/<span class="keyword">var</span>/lock/nginx.lock \</span><br><span class="line">--error-log-path=/<span class="keyword">var</span>/log/nginx/error.log \</span><br><span class="line">--http-log-path=/<span class="keyword">var</span>/log/nginx/access.log \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--http-client-body-temp-path=/<span class="keyword">var</span>/temp/nginx/client \</span><br><span class="line">--http-proxy-temp-path=/<span class="keyword">var</span>/temp/nginx/proxy \</span><br><span class="line">--http-fastcgi-temp-path=/<span class="keyword">var</span>/temp/nginx/fastcgi \</span><br><span class="line">--http-uwsgi-temp-path=/<span class="keyword">var</span>/temp/nginx/uwsgi \</span><br><span class="line">--http-scgi-temp-path=/<span class="keyword">var</span>/temp/nginx/scgi</span><br></pre></td></tr></table></figure>
 
 <p>注意：启动nginx之前,上边将临时文件目录指定为/var/temp/nginx，需要在/var下创建temp及nginx目录</p>
-<p>[root@localhost sbin]# mkdir /var/temp/nginx/client -p</p>
+<p> mkdir /var/temp/nginx/client -p</p>
 <p>6.进入解压后的nginx目录，然后执行make</p>
 <p>7.make install</p>
 <p><strong>启动nginx</strong></p>
-<p>进入sbin目录：[root@localhost sbin]# ./nginx   启动nginx</p>
-<p>[root@localhost sbin]# ps aux|grep nginx 查看nginx服务进程</p>
-<p>关闭nginx：[root@localhost sbin]# ./nginx -s stop</p>
-<p>推荐使用：[root@localhost sbin]# ./nginx -s quit</p>
+<p>进入sbin目录： ./nginx   启动nginx</p>
+<p> ps aux|grep nginx 查看nginx服务进程</p>
+<p>关闭nginx： ./nginx -s stop</p>
+<p>推荐使用： ./nginx -s quit</p>
 <h5 id="一，配置虚拟主机"><a href="#一，配置虚拟主机" class="headerlink" title="一，配置虚拟主机"></a>一，配置虚拟主机</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//一个server节点就是一个虚拟主机</span><br><span class="line">server &#123;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  localhost;</span><br><span class="line">	#charset koi8-r;</span><br><span class="line">	#access_log  logs/host.access.log  main;</span><br><span class="line">	location / &#123;</span><br><span class="line">        root   html; //html是nginx安装目录下的html目录</span><br><span class="line">        index  index.html index.htm; //欢迎页面</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>添加完一个新的server节点之后需要重新加载配置文件：<strong>[root@localhost nginx]# sbin/nginx -s reload</strong></p>
+<p>添加完一个新的server节点之后需要重新加载配置文件：sbin/nginx -s reload</p>
 <h5 id="二，nginx实现反向代理"><a href="#二，nginx实现反向代理" class="headerlink" title="二，nginx实现反向代理"></a>二，nginx实现反向代理</h5><p>1.安装两个tomcat，分别修改两个tomcat下conf目录下的server.xml文件，端口分别为8081，8082</p>
-<p>2.运行两个tomcat，tomcat目录下的bin目录    [root@weitao bin]# ./startup.sh   </p>
-<p><strong>查看tomcat启动日志： [root@weitao app]# tail -f tomcat-tianmao/logs/catalina.out</strong></p>
+<p>2.运行两个tomcat，tomcat目录下的bin目录    ./startup.sh   </p>
+<p><strong>查看tomcat启动日志：  tail -f tomcat-tianmao/logs/catalina.out</strong></p>
 <p>3.反向代理服务器的配置</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">upstream tomcat1 &#123;</span><br><span class="line">	server <span class="number">192.168</span><span class="number">.25</span><span class="number">.148</span>:<span class="number">8080</span>;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  www.sina.com.cn;</span><br><span class="line">  	#charset koi8-r;</span><br><span class="line">	#access_log  logs/host.access.log  main;</span><br><span class="line">	location / &#123;</span><br><span class="line">        proxy_pass   http:<span class="comment">//tomcat1;</span></span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">upstream tomcat2 &#123;</span><br><span class="line">	server <span class="number">192.168</span><span class="number">.25</span><span class="number">.148</span>:<span class="number">8081</span>;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  www.sohu.com;</span><br><span class="line">	#charset koi8-r;</span><br><span class="line">	#access_log  logs/host.access.log  main;</span><br><span class="line">	location / &#123;</span><br><span class="line">        proxy_pass   http:<span class="comment">//tomcat2;</span></span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
