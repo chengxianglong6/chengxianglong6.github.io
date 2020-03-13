@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Mongoose简单使用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+  <meta name="description" content="1. Mongoose 简介Mongoose是在nodejs环境中对MongoDB数据库操作的封装，一种对象模型工具，可以将数据库中的数据转换为javascript对象供我们使用，借助 Mongoose 我们可以很方便的操作 MongoDB 数据库。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mongoose简单使用">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;13&#x2F;Mongoose%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. Mongoose 简介Mongoose是在nodejs环境中对MongoDB数据库操作的封装，一种对象模型工具，可以将数据库中的数据转换为javascript对象供我们使用，借助 Mongoose 我们可以很方便的操作 MongoDB 数据库。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-13T04:17:07.006Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -137,600 +140,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-redis数据类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Mongoose简单使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">redis数据类型</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/13/redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2020-03-13T04:13:38.102Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>redis是以 key / value 形式存储数据的，数据类型指的是value的数据类型</p>
-<p>redis中所有数据都是字符串类型</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-redis的安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/redis%E7%9A%84%E5%AE%89%E8%A3%85/">redis的安装</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/13/redis%E7%9A%84%E5%AE%89%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2020-03-13T04:11:45.080Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><ol>
-<li><p>安装 redis 需要 c 语言的编译环境。如果没有 gcc 需要在线安装。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ol>
-<ol start="2">
-<li><p>把 redis 源码包 ( redis-3.0.0.tar.gz ) 上传到 linux 任意目录下</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/redis%E7%9A%84%E5%AE%89%E8%A3%85/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-回调函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/">回调函数</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/13/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-03-13T04:09:00.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>当程序有异步操作时，我们不能用常规方法去获取异步操作返回的值，如下代码：</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-express简单使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/express%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">express简单使用</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/13/express%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-03-13T04:08:15.190Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-express-是什么？"><a href="#1-express-是什么？" class="headerlink" title="1. express 是什么？"></a>1. express 是什么？</h2><p>基于 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> 平台，快速、开放、极简的 Web 开发框架，使我们能够快速搭建 nodejs 服务，大大的提高了代码效率，有利于代码统一规范。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/express%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nodejs使用art-template" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/nodejs%E4%BD%BF%E7%94%A8art-template/">nodejs使用art-template</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/13/nodejs%E4%BD%BF%E7%94%A8art-template/" class="archive-article-date">
-  	<time datetime="2020-03-13T04:07:25.946Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-art-template-的基本使用"><a href="#1-art-template-的基本使用" class="headerlink" title="1. art-template 的基本使用"></a>1. art-template 的基本使用</h2><ol>
-<li><p>安装 art-template <code>npm install art-template</code></p>
-</li>
-<li><p>在需要使用的文件模块中导入 art-template 模块 <code>require(&#39;art-template&#39;)</code></p>
-<p>示例代码如下</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/nodejs%E4%BD%BF%E7%94%A8art-template/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nodejs模块系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/nodejs%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F/">nodejs模块系统</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/13/nodejs%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  	<time datetime="2020-03-13T04:05:57.437Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="模块是什么？"><a href="#模块是什么？" class="headerlink" title="模块是什么？"></a>模块是什么？</h2><p>自己编写的每个 js 文件就可以看作一个模块，nodejs 中有三类模块</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/nodejs%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nodejs-http" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/nodejs-http/">nodejs-http</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/13/nodejs-http/" class="archive-article-date">
-  	<time datetime="2020-03-13T04:05:03.270Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="node-js-的-http-模块"><a href="#node-js-的-http-模块" class="headerlink" title="node.js 的 http 模块"></a>node.js 的 http 模块</h3><p>http模块可以用来快捷创建一个服务器，代码如下</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/nodejs-http/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nginx安装和使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">nginx安装和使用</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/13/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-03-13T04:01:17.487Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-安装启动"><a href="#1-安装启动" class="headerlink" title="1. 安装启动"></a>1. 安装启动</h2><h3 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1 安装"></a>1.1 安装</h3><ul>
-<li>linux 需要联网在线安装C语言环境</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MongoDB常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/MongoDB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">MongoDB常用命令</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/13/MongoDB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-03-13T03:53:11.260Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>mongodb 中有 <strong>集合</strong> 和 <strong>文档</strong> 概念</p>
-<p>集合就相当于 mysql 的表，文档就相当于表记录</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/MongoDB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mongoose简单使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/Mongoose%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">Mongoose简单使用</a>
+    <h1 class="article-title" itemprop="name">
+      Mongoose简单使用
     </h1>
   
 
@@ -744,9 +161,50 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="1-Mongoose-简介"><a href="#1-Mongoose-简介" class="headerlink" title="1. Mongoose 简介"></a>1. Mongoose 简介</h2><p>Mongoose是在nodejs环境中对MongoDB数据库操作的封装，一种对象模型工具，可以将数据库中的数据转换为javascript对象供我们使用，借助 Mongoose 我们可以很方便的操作 MongoDB 数据库。</p>
-        
+<a id="more"></a>
+
+<h2 id="2-Schema-和-Model"><a href="#2-Schema-和-Model" class="headerlink" title="2. Schema 和 Model"></a>2. Schema 和 Model</h2><h3 id="2-1-Schema"><a href="#2-1-Schema" class="headerlink" title="2.1 Schema"></a>2.1 Schema</h3><p> 在 Mongoose 中，所有数据都由一个 Schema 开始创建。每一个 schema 都映射到一个 Mongodb 的集合(collection)，并定义了该集合 (collection) 中的文档 (document) 的形式。</p>
+<p>它是一种以文件形式存储的数据库模型骨架，不具备对数据库操作的能力，仅仅只是数据库在程序片段中的一种表现，可以理解为表结构。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"><span class="keyword">var</span> Schema = mongoose.Schema;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> blogSchema = <span class="keyword">new</span> Schema(&#123;</span><br><span class="line">  title:  <span class="built_in">String</span>,</span><br><span class="line">  author: <span class="built_in">String</span>,</span><br><span class="line">  body:   <span class="built_in">String</span>,</span><br><span class="line">  comments: [&#123; <span class="attr">body</span>: <span class="built_in">String</span>, <span class="attr">date</span>: <span class="built_in">Date</span> &#125;],</span><br><span class="line">  date: &#123; <span class="attr">type</span>: <span class="built_in">Date</span>, <span class="attr">default</span>: <span class="built_in">Date</span>.now &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-Model"><a href="#2-2-Model" class="headerlink" title="2.2 Model"></a>2.2 Model</h3><p>Model 是从 <code>Schema</code> 编译来的构造函数。 它们的实例就代表着可以从数据库保存和读取的 documents 。从数据库创建和读取 document 的所有操作都是通过 model 进行的。</p>
+<h2 id="3-Mongoose-简单使用"><a href="#3-Mongoose-简单使用" class="headerlink" title="3. Mongoose 简单使用"></a>3. Mongoose 简单使用</h2><h3 id="3-1-安装-Mongoose："><a href="#3-1-安装-Mongoose：" class="headerlink" title="3.1 安装 Mongoose："></a>3.1 安装 Mongoose：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -S mongoose</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-创建-Schema"><a href="#3-2-创建-Schema" class="headerlink" title="3.2 创建 Schema"></a>3.2 创建 Schema</h3><p>先创建一个模型文件 user.js ，定义文档形式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入模块</span></span><br><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 链接本地 mongodb 数据库</span></span><br><span class="line"><span class="comment">// 端口号可以省略</span></span><br><span class="line"><span class="comment">// test 是数据库名字，如果该数据库不存在，则会新建</span></span><br><span class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Schema = mongoose.Schema</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建 userSchema,并定义文档形式</span></span><br><span class="line"><span class="keyword">var</span> userSchema = <span class="keyword">new</span> Schema(&#123;</span><br><span class="line">	name: &#123;</span><br><span class="line">		type: <span class="built_in">String</span>, <span class="comment">// 该字段为 String 类型</span></span><br><span class="line">		required: <span class="literal">true</span> <span class="comment">// 该字段不能为空</span></span><br><span class="line">	&#125;,</span><br><span class="line">	created_time: &#123;</span><br><span class="line">		type: <span class="built_in">Date</span>,</span><br><span class="line">      	<span class="comment">// 默认时间为当前系统日期，要用 Date.now</span></span><br><span class="line">      	<span class="comment">// 不能使用 Date.now()， 因为系统会立即执行</span></span><br><span class="line">		<span class="keyword">default</span>: <span class="built_in">Date</span>.now </span><br><span class="line">	&#125;,</span><br><span class="line">	gender: &#123;</span><br><span class="line">		type: <span class="built_in">Number</span>,  <span class="comment">// 该字段类型为 Number</span></span><br><span class="line">		enum: [<span class="number">-1</span>,<span class="number">0</span>,<span class="number">1</span>],  <span class="comment">// 设置枚举值，只能是 -1，0，1 其中一个</span></span><br><span class="line">		<span class="keyword">default</span>: <span class="number">-1</span>   <span class="comment">// 默认 -1</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建 User 模型并导出</span></span><br><span class="line"><span class="comment">// 第一个参数：要创建的模型名称</span></span><br><span class="line"><span class="comment">// 第二个参数：上面创建的 Schema</span></span><br><span class="line"><span class="built_in">module</span>.exports = mongoose.model(<span class="string">'User'</span>,userSchema)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-简单增删改查"><a href="#3-3-简单增删改查" class="headerlink" title="3.3 简单增删改查"></a>3.3 简单增删改查</h3><h4 id="3-3-1-新增数据：Model-save"><a href="#3-3-1-新增数据：Model-save" class="headerlink" title="3.3.1 新增数据：Model.save()"></a>3.3.1 新增数据：<code>Model.save()</code></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入创建的模型文件</span></span><br><span class="line"><span class="keyword">var</span> User = <span class="built_in">require</span>(<span class="string">'./user.js'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个用户对象</span></span><br><span class="line"><span class="keyword">var</span> zs = &#123;</span><br><span class="line">	name: <span class="string">'zhangsan'</span>,</span><br><span class="line">	gender: <span class="string">'1'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// save 方法用于新增数据</span></span><br><span class="line"><span class="comment">// 如果成功会返回新增的用户数据</span></span><br><span class="line">User(zs).save(<span class="function"><span class="keyword">function</span>(<span class="params">error,data</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(error)&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(error)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'New users successfully!'</span>)</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'user:'</span>,data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-2-查询数据：Model-find-or-Model-findOne"><a href="#3-3-2-查询数据：Model-find-or-Model-findOne" class="headerlink" title="3.3.2 查询数据：Model.find()  or Model.findOne()"></a>3.3.2 查询数据：<code>Model.find()</code>  or <code>Model.findOne()</code></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// find()方法用于查询数据</span></span><br><span class="line"><span class="comment">// 第一个参数：用于设置查询条件，如 name 为 zhangsan</span></span><br><span class="line"><span class="comment">// 第二个参数：回调函数，接收错误对象 和 查询到的数据</span></span><br><span class="line">User.find(&#123;</span><br><span class="line">	name:<span class="string">'zhangsan'</span>,</span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">error,data</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(error)&#123;</span><br><span class="line">	  <span class="built_in">console</span>.log(error)</span><br><span class="line">	  <span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// findOne() 只查询一条数据</span></span><br><span class="line"><span class="comment">// 即使符合条件的数据有多条，但也只返回一条</span></span><br><span class="line">User.findOne(&#123;</span><br><span class="line">	name:<span class="string">'zhangsan'</span>,</span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">error,data</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(error)&#123;</span><br><span class="line">	  <span class="built_in">console</span>.log(error)</span><br><span class="line">	  <span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-3-修改数据：Model-update-更新条件-更新内容-可选-回调函数"><a href="#3-3-3-修改数据：Model-update-更新条件-更新内容-可选-回调函数" class="headerlink" title="3.3.3 修改数据：Model.update(更新条件,更新内容,可选,回调函数)"></a>3.3.3 修改数据：<code>Model.update(更新条件,更新内容,可选,回调函数)</code></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 更新数据的条件</span></span><br><span class="line"><span class="comment">// 更新 name 为 zhangsan 的数据</span></span><br><span class="line"><span class="keyword">var</span> whereStr = &#123;<span class="string">'name'</span>: <span class="string">'zhangsan'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 更新内容</span></span><br><span class="line"><span class="comment">// 把 name 更新为 zs，gender 更新为 0</span></span><br><span class="line"><span class="keyword">var</span> updateStr = &#123;<span class="string">'name'</span>: <span class="string">'zs'</span>, <span class="string">'gender'</span>: <span class="string">'0'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用 update 方法进行更新</span></span><br><span class="line">User.update(whereStr, updateStr, <span class="function"><span class="keyword">function</span>(<span class="params">error,data</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(error)&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(error)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-4-删除数据：Model-remove-删除条件，回调函数"><a href="#3-3-4-删除数据：Model-remove-删除条件，回调函数" class="headerlink" title="3.3.4 删除数据：Model.remove(删除条件，回调函数)"></a>3.3.4 删除数据：<code>Model.remove(删除条件，回调函数)</code></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除数据的条件</span></span><br><span class="line"><span class="comment">// 删除 name 为 zhangsan 的数据</span></span><br><span class="line"><span class="keyword">var</span> whereStr = &#123;<span class="string">'name'</span>: <span class="string">'zhangsan'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用 remove 方法进行删除</span></span><br><span class="line">User.remove(whereStr,<span class="function"><span class="keyword">function</span>(<span class="params">error,data</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(error)&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(error)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -755,16 +213,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/13/Mongoose%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">阅读全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/13/Mongoose%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/03/13/MongoDB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MongoDB常用命令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/13/win10%E5%AE%89%E8%A3%85MongoDB%EF%BC%88zip%E7%89%88%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">win10安装MongoDB（zip版）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -784,12 +310,14 @@
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+
   
 
 
@@ -812,8 +340,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>使用hexo框架搭建博客（windows版） | Hexo</title>
+  <title>express简单使用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一，安装准备1，进入nodejs中文网 http:&#x2F;&#x2F;nodejs.cn&#x2F;download 下载nodejs Windows安装包，本文使用的是 node-v12.13.0-x64.msi，一直点击下一步安装即可。">
+  <meta name="description" content="1. express 是什么？基于 Node.js 平台，快速、开放、极简的 Web 开发框架，使我们能够快速搭建 nodejs 服务，大大的提高了代码效率，有利于代码统一规范。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用hexo框架搭建博客（windows版）">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;17&#x2F;%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88windows%E7%89%88%EF%BC%89&#x2F;index.html">
+<meta property="og:title" content="express简单使用">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;13&#x2F;express%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一，安装准备1，进入nodejs中文网 http:&#x2F;&#x2F;nodejs.cn&#x2F;download 下载nodejs Windows安装包，本文使用的是 node-v12.13.0-x64.msi，一直点击下一步安装即可。">
+<meta property="og:description" content="1. express 是什么？基于 Node.js 平台，快速、开放、极简的 Web 开发框架，使我们能够快速搭建 nodejs 服务，大大的提高了代码效率，有利于代码统一规范。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-17T04:45:01.827Z">
+<meta property="og:updated_time" content="2020-03-13T04:16:38.131Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -48,7 +48,7 @@
 			<img src="/img/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Mr.Cheng</a></h1>
+		  <h1 class="header-author"><a href="/">Monsters</a></h1>
 		</hgroup>
 		
 
@@ -100,7 +100,7 @@
 				<img src="/img/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Mr.Cheng</h1>
+			  <h1 class="header-author js-header-author">Monsters</h1>
 			</hgroup>
 			
 			
@@ -140,81 +140,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-使用hexo框架搭建博客（windows版）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-express简单使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用hexo框架搭建博客（windows版）
+      express简单使用
     </h1>
   
 
         
-        <a href="/2019/11/17/%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88windows%E7%89%88%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2019-11-17T04:44:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
+        <a href="/2020/03/13/express%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-03-13T04:08:15.190Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="一，安装准备"><a href="#一，安装准备" class="headerlink" title="一，安装准备"></a>一，安装准备</h5><p>1，进入nodejs中文网 <a href="http://nodejs.cn/download" target="_blank" rel="noopener">http://nodejs.cn/download</a> 下载nodejs Windows安装包，本文使用的是 node-v12.13.0-x64.msi，一直点击下一步安装即可。</p>
+        <h2 id="1-express-是什么？"><a href="#1-express-是什么？" class="headerlink" title="1. express 是什么？"></a>1. express 是什么？</h2><p>基于 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> 平台，快速、开放、极简的 Web 开发框架，使我们能够快速搭建 nodejs 服务，大大的提高了代码效率，有利于代码统一规范。</p>
 <a id="more"></a>
 
-<p>安装成功后，打开cmd命令窗口，输入node -v即可看到版本号。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<h2 id="2-express-简单使用示例"><a href="#2-express-简单使用示例" class="headerlink" title="2. express 简单使用示例"></a>2. express 简单使用示例</h2><p>首先需要安装 express <code>npm install -S express</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入 express 模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="comment">// 可以把 app 看作 server</span></span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"><span class="comment">// 当客户端请求 / 时，响应 hello world</span></span><br><span class="line">app.get(<span class="string">'/'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">	response.send(<span class="string">'hello world!'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 监听 3000 端口启动服务</span></span><br><span class="line">app.listen(<span class="string">'3000'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'server is running!'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>2，替换镜像源为淘宝</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<h2 id="3-express-访问静态资源"><a href="#3-express-访问静态资源" class="headerlink" title="3. express 访问静态资源"></a>3. express 访问静态资源</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方式一，当请求是 /static 时，可以访问到 static 目录下的静态资源</span></span><br><span class="line"><span class="comment">// 例如：127.0.0.1:3000/static/css/xx.css</span></span><br><span class="line">app.use(<span class="string">'/static'</span>,express.static(<span class="string">'./static'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式二，省略第一个参数,此时访问静态资源直接访问即可</span></span><br><span class="line"><span class="comment">// 例如：127.0.0.1:3000/css/xx.css</span></span><br><span class="line">app.use(express.static(<span class="string">'./static'</span>))</span><br></pre></td></tr></table></figure>
 
-<p>安装成功后输入 cnpm 可以看到cnpm的帮助</p>
-<h5 id="二，安装hexo"><a href="#二，安装hexo" class="headerlink" title="二，安装hexo"></a>二，安装hexo</h5><p>1，安装hexo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="4-express-使用-art-template-模板引擎"><a href="#4-express-使用-art-template-模板引擎" class="headerlink" title="4. express 使用 art-template 模板引擎"></a>4. express 使用 art-template 模板引擎</h2><p>安装</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -S art-template</span><br><span class="line">npm install -S express-art-template</span><br></pre></td></tr></table></figure>
 
-<p>安装成功后输入 hexo -v 即可看到版本号</p>
-<p>2，新建一个文件夹，命名随意，这里命名为blog</p>
-<p>通过命令进入到blog文件夹中，然后通过命令初始化博客</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>demo ：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入 express 模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置使用 art-template 模板引擎</span></span><br><span class="line"><span class="comment">// 第一个参数表示，当渲染后缀名为 art 的文件时，使用 art-template 模板引擎</span></span><br><span class="line"><span class="comment">// 第一个参数可以改为 html，这样就可以渲染后缀为 html 的文件了</span></span><br><span class="line"><span class="comment">// express-art-template是专门用来整合 express 和 art-template 的</span></span><br><span class="line"><span class="comment">// express-art-template 依赖了 art-template</span></span><br><span class="line">app.engine(<span class="string">'art'</span>, <span class="built_in">require</span>(<span class="string">'express-art-template'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">// express 提供了 render 方法</span></span><br><span class="line"><span class="comment">// res.render('html模板名',&#123;模板数据&#125;)</span></span><br><span class="line"><span class="comment">// render 方法第一个参数直接写文件名，默认会去项目的 views 目录下寻找该模板文件</span></span><br><span class="line"><span class="comment">// 如果想要修改默认的 views 目录，则可以：</span></span><br><span class="line"><span class="comment">// app.set('views', render函数的默认路径)</span></span><br><span class="line">app.get(<span class="string">'/'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">  res.render(<span class="string">'index.art'</span>,&#123;</span><br><span class="line">    name: <span class="string">'zhangsan'</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="string">'3001'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'server is running'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>3，初始化成功之后就可以启动hexo了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="5-express-处理-post-请求参数"><a href="#5-express-处理-post-请求参数" class="headerlink" title="5. express 处理 post 请求参数"></a>5. express 处理 post 请求参数</h2><p>在 express 中没有内置获取 post 请求参数的API，所以我们需要借助第三方包 <code>body-parser</code></p>
+<p>安装：<code>npm install --save body-parser</code></p>
+<p>demo 如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导包</span></span><br><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置使用 art-template 模板引擎</span></span><br><span class="line">app.engine(<span class="string">'html'</span>, <span class="built_in">require</span>(<span class="string">'express-art-template'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置 body-parser</span></span><br><span class="line"><span class="comment">// 加入这个配置，则 request 请求对象会多出来一个 body 属性</span></span><br><span class="line"><span class="comment">// 也就是说我们可以通过 request.body 来获取 post 请求的参数</span></span><br><span class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求访问 / 时，渲染表单页面并响应</span></span><br><span class="line">app.get(<span class="string">'/'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">	res.render(<span class="string">'form.html'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 表单提交请求 /post </span></span><br><span class="line"><span class="comment">// req.body 获取 post 请求参数</span></span><br><span class="line"><span class="comment">// 假设表单有两个 input 标签，填写了名字和性别，获取数据如下</span></span><br><span class="line"><span class="comment">// &#123; name: '张三', gender: '男' &#125;</span></span><br><span class="line">app.post(<span class="string">'/post'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(req.body)</span><br><span class="line">	res.send(req.body)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="string">'3002'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'server is running'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>hexo默认端口是4000，启动后我们可以打开浏览器输入 localhost:4000来访问博客</p>
-<p>ctrl+c 关闭</p>
-<p>到此就成功搭建了一个简单的博客，我们可以把博客部署到github上远程访问。</p>
-<h5 id="三，部署到github"><a href="#三，部署到github" class="headerlink" title="三，部署到github"></a>三，部署到github</h5><p>1，登录github后新建仓库，仓库名必须是 自己github的用户名 + .github.io</p>
-<p>比如我的github用户名是chengxianglong6，我新建的这个仓库名就必须是 chengxianglong6.github.io</p>
-<p>2，在本地安装一个部署的插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<h2 id="6-提取路由模块"><a href="#6-提取路由模块" class="headerlink" title="6. 提取路由模块"></a>6. 提取路由模块</h2><p>创建一个 router.js 用来专门写路由</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. 创建一个路由容器</span></span><br><span class="line"><span class="comment">// express 提供了 Router 方法用于创建路由容器</span></span><br><span class="line"><span class="keyword">var</span> router = express.Router()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 把路由挂载到容器中</span></span><br><span class="line">router.get(<span class="string">'/hello'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">	res.send(<span class="string">'hello'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出 router</span></span><br><span class="line"><span class="built_in">module</span>.exports = router</span><br></pre></td></tr></table></figure>
 
-<p>3，编辑hexo的配置文件（blog文件夹内的 _config.yml）</p>
-<p>找到最后一行进行编辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> repo: 刚刚新建的github仓库地址</span><br><span class="line"> branch: master</span><br></pre></td></tr></table></figure>
+<p>创建 app.js 程序主入口，来加载路由并运行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导入上面创建的路由模块 router.js</span></span><br><span class="line"><span class="keyword">var</span> router = <span class="built_in">require</span>(<span class="string">'./router.js'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 把路由容器挂载到 app 服务中</span></span><br><span class="line">app.use(router)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="string">'3000'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'server is running'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>4，编辑后要先清理，再生成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean --先清理</span><br><span class="line">hexo g --再生成</span><br></pre></td></tr></table></figure>
+<p>启动服务，访问 127.0.0.1:3000/hello 即可看到响应的 hello</p>
+<h2 id="7-express-操作-session"><a href="#7-express-操作-session" class="headerlink" title="7. express 操作 session"></a>7. express 操作 session</h2><p>express 本身不支持操作 session，需要使用第三方包来操作session</p>
+<p>安装</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -S express-session</span><br></pre></td></tr></table></figure>
 
-<p>5，部署到github</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>Demo</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="comment">// 导入 session 模块</span></span><br><span class="line"><span class="keyword">var</span> session = <span class="built_in">require</span>(<span class="string">'express-session'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建 app 服务</span></span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置 session</span></span><br><span class="line">app.use(session(&#123;</span><br><span class="line">  <span class="comment">// 配置加密字符串，它会在原有加密基础之上和这个字符串拼起来去加密</span></span><br><span class="line">  <span class="comment">// 目的是为了增加安全性，防止客户端恶意伪造</span></span><br><span class="line">  secret: <span class="string">'test'</span>,</span><br><span class="line">  resave: <span class="literal">false</span>,</span><br><span class="line">  saveUninitialized: <span class="literal">false</span> <span class="comment">// 无论你是否使用 Session ，我都默认直接给你分配一把钥匙</span></span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">// req.session 即可操作 session</span></span><br><span class="line">app.get(<span class="string">'/'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 写入 session</span></span><br><span class="line">  req.session.msg = <span class="string">'hello session'</span></span><br><span class="line">  <span class="comment">// 获取 session 中 msg 的值</span></span><br><span class="line">  <span class="keyword">var</span> msg = req.session.msg</span><br><span class="line">  <span class="comment">// 运行结果：hello session</span></span><br><span class="line">  res.send(msg)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="string">'3000'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'server is running...'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>6，到此部署完成，我们可以在浏览器中输入新建的仓库地址来访问我们的博客，比如我的是 chengxianglong6.github.io 。</p>
-<h5 id="四，修改博客主题"><a href="#四，修改博客主题" class="headerlink" title="四，修改博客主题"></a>四，修改博客主题</h5><p>hexo默认的主题比较简陋，我们可以去百度精美主题，本次实例使用的主题是 yilia</p>
-<p>1，clone主题到blog文件夹下的themes文件夹中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
-
-<p>2，修改hexo的配置文件 _config.yml</p>
-<p>找到theme，修改为yilia即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
-
-<p>3，先清理，再生成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean --先清理</span><br><span class="line">hexo g --再生成</span><br></pre></td></tr></table></figure>
-
-<p>4，最后部署到github</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>访问404多刷新几次网页。</p>
 
       
 
@@ -294,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/17/%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%EF%BC%88windows%E7%89%88%EF%BC%89/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/13/express%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -308,9 +286,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/03/13/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          回调函数
+        
+      </div>
+    </a>
   
-    <a href="/2019/11/17/jvm%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jvm笔记</div>
+  
+    <a href="/2020/03/13/nodejs%E4%BD%BF%E7%94%A8art-template/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nodejs使用art-template</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -353,7 +340,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 Mr.Cheng
+    		&copy; 2020 Monsters
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

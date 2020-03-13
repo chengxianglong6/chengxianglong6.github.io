@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Solr服务搭建和使用 | Hexo</title>
+  <title>nginx安装和使用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Solr搭建1.首先安装jdk 2.把 solr 包上传到Linux，并解压：tar zxf solr-4.10.3.tgz.tgz">
+  <meta name="description" content="1. 安装启动1.1 安装 linux 需要联网在线安装C语言环境  1yum install gcc-c++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Solr服务搭建和使用">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;13&#x2F;Solr%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8&#x2F;index.html">
+<meta property="og:title" content="nginx安装和使用">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;13&#x2F;nginx%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Solr搭建1.首先安装jdk 2.把 solr 包上传到Linux，并解压：tar zxf solr-4.10.3.tgz.tgz">
+<meta property="og:description" content="1. 安装启动1.1 安装 linux 需要联网在线安装C语言环境  1yum install gcc-c++">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-08T12:44:00.148Z">
+<meta property="og:updated_time" content="2020-03-13T04:17:17.812Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -48,7 +48,7 @@
 			<img src="/img/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Mr.Cheng</a></h1>
+		  <h1 class="header-author"><a href="/">Monsters</a></h1>
 		</hgroup>
 		
 
@@ -100,7 +100,7 @@
 				<img src="/img/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Mr.Cheng</h1>
+			  <h1 class="header-author js-header-author">Monsters</h1>
 			</hgroup>
 			
 			
@@ -140,151 +140,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Solr服务搭建和使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-nginx安装和使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Solr服务搭建和使用
+      nginx安装和使用
     </h1>
   
 
         
-        <a href="/2019/11/13/Solr%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2019-11-13T10:00:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
+        <a href="/2020/03/13/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-03-13T04:01:17.487Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="Solr搭建"><a href="#Solr搭建" class="headerlink" title="Solr搭建"></a>Solr搭建</h5><p>1.首先安装jdk</p>
-<p>2.把 solr 包上传到Linux，并解压：tar zxf solr-4.10.3.tgz.tgz</p>
+        <h2 id="1-安装启动"><a href="#1-安装启动" class="headerlink" title="1. 安装启动"></a>1. 安装启动</h2><h3 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1 安装"></a>1.1 安装</h3><ul>
+<li>linux 需要联网在线安装C语言环境</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
+
 <a id="more"></a>
 
-<p>3.上传tomcat 包，并解压：tar zxf apache-tomcat-7.0.47.tar.gz</p>
-<p>4.创建目录 solr</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir solr</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装第三方开发包</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install -y pcre pcre-devel</span><br><span class="line">yum install -y zlib zlib-devel</span><br><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
 
-<p>把解压后的 tomcat 复制到新创建的 solr 目录下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp apache-tomcat-<span class="number">7.0</span><span class="number">.47</span> solr/tomcat -r</span><br></pre></td></tr></table></figure>
+<ul>
+<li>把 nginx 的源码包上传到 linux 中</li>
+<li>解压缩 <code>tar zxf nginx-1.8.0.tar.gz</code></li>
+<li>进入解压后的 nginx 目录，使用 configure 命令创建一makeFile文件。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">./configure \</span><br><span class="line">--prefix=/usr/local/nginx \</span><br><span class="line">--pid-path=/<span class="keyword">var</span>/run/nginx/nginx.pid \</span><br><span class="line">--lock-path=/<span class="keyword">var</span>/lock/nginx.lock \</span><br><span class="line">--error-log-path=/<span class="keyword">var</span>/log/nginx/error.log \</span><br><span class="line">--http-log-path=/<span class="keyword">var</span>/log/nginx/access.log \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--http-client-body-temp-path=/<span class="keyword">var</span>/temp/nginx/client \</span><br><span class="line">--http-proxy-temp-path=/<span class="keyword">var</span>/temp/nginx/proxy \</span><br><span class="line">--http-fastcgi-temp-path=/<span class="keyword">var</span>/temp/nginx/fastcgi \</span><br><span class="line">--http-uwsgi-temp-path=/<span class="keyword">var</span>/temp/nginx/uwsgi \</span><br><span class="line">--http-scgi-temp-path=/<span class="keyword">var</span>/temp/nginx/scgi</span><br></pre></td></tr></table></figure>
 
-<p>把解压后的 solr-4.10.3 /dist 目录下的 solr.war包部署到 tomcat webapps 目录下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp solr-<span class="number">4.10</span><span class="number">.3</span>/dist/solr-<span class="number">4.10</span><span class="number">.3</span>.war solr/tomcat/webapps/solr.war</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意：启动 nginx 之前,上边将临时文件目录指定为 /var/temp/nginx</li>
+<li>需要在 /var 下创建 temp 及 nginx 目录</li>
+<li><code>mkdir /var/temp/nginx/client -p</code></li>
+<li>进入解压后的nginx目录，然后执行make</li>
+<li>make install</li>
+</ul>
+<h3 id="1-2-启动"><a href="#1-2-启动" class="headerlink" title="1.2 启动"></a>1.2 启动</h3><ul>
+<li>进入sbin目录：<code>./nginx</code>   启动nginx</li>
+<li><code>ps aux|grep nginx</code> 查看nginx服务进程</li>
+<li>关闭nginx：<code>./nginx -s stop</code><ul>
+<li>推荐使用：<code>./nginx -s quit</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="2-配置虚拟主机"><a href="#2-配置虚拟主机" class="headerlink" title="2. 配置虚拟主机"></a>2. 配置虚拟主机</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//一个server节点就是一个虚拟主机</span><br><span class="line">server &#123;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  localhost;</span><br><span class="line">	#charset koi8-r;</span><br><span class="line">	#access_log  logs/host.access.log  main;</span><br><span class="line">	location / &#123;</span><br><span class="line">        root   html; //html是nginx安装目录下的html目录</span><br><span class="line">        index  index.html index.htm; //欢迎页面</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>5.启动 tomcat（让tomcat 解压缩 solr.war 包）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/startup.sh</span><br></pre></td></tr></table></figure>
+<p>添加完一个新的server节点之后需要重新加载配置文件：<code>sbin/nginx -s reload</code></p>
+<h2 id="3-反向代理"><a href="#3-反向代理" class="headerlink" title="3. 反向代理"></a>3. 反向代理</h2><ul>
+<li>安装两个tomcat，分别修改两个 tomcat 下 conf 目录下的 server.xml 文件，端口分别为8081，8082</li>
+<li>运行两个tomcat，tomcat目录下的bin目录    <code>./startup.sh</code></li>
+<li>查看tomcat启动日志：<code>tail -f tomcat-tianmao/logs/catalina.out</code></li>
+<li>反向代理服务器的配置</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">upstream tomcat1 &#123;</span><br><span class="line">	server <span class="number">192.168</span><span class="number">.25</span><span class="number">.148</span>:<span class="number">8080</span>;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  www.sina.com.cn;</span><br><span class="line">  	#charset koi8-r;</span><br><span class="line">	#access_log  logs/host.access.log  main;</span><br><span class="line">	location / &#123;</span><br><span class="line">        proxy_pass   http:<span class="comment">//tomcat1;</span></span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">upstream tomcat2 &#123;</span><br><span class="line">	server <span class="number">192.168</span><span class="number">.25</span><span class="number">.148</span>:<span class="number">8081</span>;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">    listen       <span class="number">80</span>;</span><br><span class="line">    server_name  www.sohu.com;</span><br><span class="line">	#charset koi8-r;</span><br><span class="line">	#access_log  logs/host.access.log  main;</span><br><span class="line">	location / &#123;</span><br><span class="line">        proxy_pass   http:<span class="comment">//tomcat2;</span></span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>查看 tomcat 启动日志</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f logs/catalina.out</span><br></pre></td></tr></table></figure>
+<ul>
+<li>nginx重新加载配置文件</li>
+</ul>
+<h2 id="4-负载均衡"><a href="#4-负载均衡" class="headerlink" title="4. 负载均衡"></a>4. 负载均衡</h2><p>如果一个服务由多条服务器提供，需要把负载分配到不同的服务器处理，需要负载均衡。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加一个server </span></span><br><span class="line">upstream tomcat2 &#123;</span><br><span class="line">       server <span class="number">192.168</span><span class="number">.25</span><span class="number">.148</span>:<span class="number">8081</span>;</span><br><span class="line">       server <span class="number">192.168</span><span class="number">.25</span><span class="number">.148</span>:<span class="number">8082</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
-<p>然后关闭tomcat</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/shutdown.sh</span><br></pre></td></tr></table></figure>
+<p>可以根据服务器的实际情况调整服务器权重。权重越高分配的请求越多，权重越低，请求越少。默认是都是1</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//weight用来设置服务器的权重</span></span><br><span class="line">upstream tomcat2 &#123;</span><br><span class="line">	server <span class="number">192.168</span><span class="number">.25</span><span class="number">.148</span>:<span class="number">8081</span>;</span><br><span class="line">	server <span class="number">192.168</span><span class="number">.25</span><span class="number">.148</span>:<span class="number">8082</span> weight=<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>进入tomcat/webapps目录下就可以看到解压之后的solr,最后把之前放进来的solr.war删除</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -f solr.war</span><br></pre></td></tr></table></figure>
 
-<p>6.进入之前解压的 solr-4.10.3 目录，进入example / lib / ext 目录，复制所有的jar包到 tomcat里部署的solr 里</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp * /usr/local/solr/tomcat/webapps/solr/WEB-INF/lib/</span><br></pre></td></tr></table></figure>
 
-<p>以上的是solr 运行要用到的 jar包</p>
-<p>7.创建 solrhome 目录，直接复制 /usr/local/solr-4.10.3/example 目录下的 solr 作为solrhome</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r solr /usr/local/solr/solrhome</span><br></pre></td></tr></table></figure>
 
-<p>然后修改 /usr/local/solr/tomcat/webapps/solr/WEB-INF/web.xml，去掉下面代码的注释，把路径改为刚复制的solrhome</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;env-entry&gt;</span><br><span class="line">   &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</span><br><span class="line">   &lt;env-entry-value&gt;/usr/local/solr/solrhome&lt;/env-entry-value&gt;</span><br><span class="line">   &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</span><br><span class="line">&lt;/env-entry&gt;</span><br></pre></td></tr></table></figure>
 
-<p>8.启动 tomcat 即可</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/startup.sh</span><br></pre></td></tr></table></figure>
 
-<p>访问 192.168.25.16:8080/solr</p>
-<h5 id="Solr使用"><a href="#Solr使用" class="headerlink" title="Solr使用"></a>Solr使用</h5><p>1.创建对应的业务域,需要制定中文分析器。</p>
-<p>把IK Analyzer 2012FF_hf1文件夹上传到Linux中，然后进入文件夹复制IKAnalyzer2012FF_u1.jar 包到solr lib下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp IKAnalyzer2012FF_u1.jar /usr/local/solr/tomcat/webapps/solr/WEB-INF/lib</span><br></pre></td></tr></table></figure>
 
-<p>创建一个classes文件夹，然后复制中文解析器的配置文件到classes文件夹中</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/local/solr/tomcat/webapps/solr/WEB-INF/classes</span><br></pre></td></tr></table></figure>
 
-<p>复制配置文件</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp ext_stopword.dic IKAnalyzer.cfg.xml mydict.dic /usr/local/solr/tomcat/webapps/solr/WEB-INF/classes/</span><br></pre></td></tr></table></figure>
-
-<p>2.配置一个FieldType，指定使用IKAnalyzer</p>
-<p>修改 /usr/local/solr/solrhome/collection1/conf/schema.xml ，在文件最后面加上：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//name随便起，class固定，指定使用传入的IKAnalyzer</span></span><br><span class="line">&lt;fieldType name=<span class="string">"text_ik"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"solr.TextField"</span>&gt;</span><br><span class="line">	&lt;analyzer <span class="class"><span class="keyword">class</span></span>=<span class="string">"org.wltea.analyzer.lucene.IKAnalyzer"</span>/&gt;</span><br><span class="line">&lt;/fieldType&gt;</span><br></pre></td></tr></table></figure>
-
-<p>配置业务域，type指定使用自定义的FieldType。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//item_title是“标题”字段，item_price是“价格”字段，item_sell_point是“卖点”字段，item_image是“图片字段”，item_category_name是“分类名称”字段，它们用于搜索之后展示出来。其中 item_title ，item_sell_point 被应用于搜索的关键字。</span></span><br><span class="line">&lt;field name=<span class="string">"item_title"</span> type=<span class="string">"text_ik"</span> indexed=<span class="string">"true"</span> stored=<span class="string">"true"</span>/&gt;</span><br><span class="line">&lt;field name=<span class="string">"item_sell_point"</span> type=<span class="string">"text_ik"</span> indexed=<span class="string">"true"</span> stored=<span class="string">"true"</span>/&gt;</span><br><span class="line">&lt;field name=<span class="string">"item_price"</span>  type=<span class="string">"long"</span> indexed=<span class="string">"true"</span> stored=<span class="string">"true"</span>/&gt;</span><br><span class="line">&lt;field name=<span class="string">"item_image"</span> type=<span class="string">"string"</span> indexed=<span class="string">"false"</span> stored=<span class="string">"true"</span> /&gt;</span><br><span class="line">&lt;field name=<span class="string">"item_category_name"</span> type=<span class="string">"string"</span> indexed=<span class="string">"true"</span> stored=<span class="string">"true"</span> /&gt;</span><br><span class="line"><span class="comment">//定义一个复制域，当向上面的文件域中添加数据时，会自动复制到keywords中，搜索的时候直接搜索keywords</span></span><br><span class="line">&lt;field name=<span class="string">"item_keywords"</span> type=<span class="string">"text_ik"</span> indexed=<span class="string">"true"</span> stored=<span class="string">"false"</span> multiValued=<span class="string">"true"</span>/&gt;</span><br><span class="line">&lt;copyField source=<span class="string">"item_title"</span> dest=<span class="string">"item_keywords"</span>/&gt;</span><br><span class="line">&lt;copyField source=<span class="string">"item_sell_point"</span> dest=<span class="string">"item_keywords"</span>/&gt;</span><br><span class="line">&lt;copyField source=<span class="string">"item_category_name"</span> dest=<span class="string">"item_keywords"</span>/&gt;</span><br></pre></td></tr></table></figure>
-
-<p>3.查询需要作为索引和展示的数据，然后写入索引库中。</p>
-<p>需要导入jar包：solrj</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//业务层代码</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> ItemMapper itemMapper; <span class="comment">//从数据库查询数据的接口</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> SolrServer solrServer; <span class="comment">//需要在配置文件中注入bean(详情见下面)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> TaotaoResult <span class="title">importAllItems</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">//查询商品列表 SearchItem是封装的pojo，用来存储要导入索引库的字段</span></span><br><span class="line">    List&lt;SearchItem&gt; itemList = itemMapper.getItemList();</span><br><span class="line">    <span class="comment">//遍历商品列表</span></span><br><span class="line">    <span class="keyword">for</span> (SearchItem searchItem : itemList) &#123;</span><br><span class="line">      <span class="comment">//创建文档对象</span></span><br><span class="line">      SolrInputDocument document = <span class="keyword">new</span> SolrInputDocument();</span><br><span class="line">      <span class="comment">//向文档对象中添加域</span></span><br><span class="line">      document.addField(<span class="string">"id"</span>, searchItem.getId());</span><br><span class="line">      document.addField(<span class="string">"item_title"</span>, searchItem.getTitle());</span><br><span class="line">      document.addField(<span class="string">"item_sell_point"</span>, searchItem.getSell_point());</span><br><span class="line">      document.addField(<span class="string">"item_price"</span>, searchItem.getPrice());</span><br><span class="line">      document.addField(<span class="string">"item_image"</span>, searchItem.getImage());</span><br><span class="line">      document.addField(<span class="string">"item_category_name"</span>, searchItem.getCategory_name());</span><br><span class="line">      <span class="comment">//把文档对象写入索引库</span></span><br><span class="line">      solrServer.add(document);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//提交</span></span><br><span class="line">    solrServer.commit();</span><br><span class="line">    <span class="comment">//返回导入成功</span></span><br><span class="line">    <span class="keyword">return</span> TaotaoResult.ok();</span><br><span class="line">  &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">    <span class="keyword">return</span> TaotaoResult.build(<span class="number">500</span>, <span class="string">"数据导入时发生异常"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在配置文件中注入solrServer bean实例</span></span><br><span class="line"><span class="comment">//application-Context-solr.xml</span></span><br><span class="line">&lt;bean id=<span class="string">"httpSolrServer"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"org.apache.solr.client.solrj.impl.HttpSolrServer"</span>&gt;</span><br><span class="line">     &lt;constructor-arg index=<span class="string">"0"</span> value=<span class="string">"http://192.168.25.16:8089/solr/collection1"</span>/&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-
-<p>4.从索引库中查询数据</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//配置文件	</span></span><br><span class="line">&lt;bean id=<span class="string">"httpSolrServer"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"org.apache.solr.client.solrj.impl.HttpSolrServer"</span>&gt;</span><br><span class="line">	&lt;constructor-arg index=<span class="string">"0"</span> value=<span class="string">"http://192.168.25.16:8089/solr/collection1"</span>/&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//dao层  SearchResult是返回查询数据的封装类</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> SolrServer solrServer;</span><br><span class="line"><span class="function"><span class="keyword">public</span> SearchResult <span class="title">search</span><span class="params">(SolrQuery query)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  <span class="comment">//根据query查询索引库</span></span><br><span class="line">  QueryResponse queryResponse = solrServer.query(query);</span><br><span class="line">  <span class="comment">//取查询结果。</span></span><br><span class="line">  SolrDocumentList solrDocumentList = queryResponse.getResults();</span><br><span class="line">  <span class="comment">//取查询结果总记录数</span></span><br><span class="line">  <span class="keyword">long</span> numFound = solrDocumentList.getNumFound();</span><br><span class="line">  SearchResult result = <span class="keyword">new</span> SearchResult();</span><br><span class="line">  result.setRecordCount(numFound);</span><br><span class="line">  <span class="comment">//取商品列表，需要取高亮显示</span></span><br><span class="line">  Map&lt;String, Map&lt;String, List&lt;String&gt;&gt;&gt; highlighting = queryResponse.getHighlighting();</span><br><span class="line">  List&lt;SearchItem&gt; itemList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">  <span class="keyword">for</span> (SolrDocument solrDocument : solrDocumentList) &#123;</span><br><span class="line">    SearchItem item = <span class="keyword">new</span> SearchItem();</span><br><span class="line">    item.setId((String) solrDocument.get(<span class="string">"id"</span>));</span><br><span class="line">    item.setCategory_name((String) solrDocument.get(<span class="string">"item_category_name"</span>));</span><br><span class="line">    item.setImage((String) solrDocument.get(<span class="string">"item_image"</span>));</span><br><span class="line">    item.setPrice((<span class="keyword">long</span>) solrDocument.get(<span class="string">"item_price"</span>));</span><br><span class="line">    item.setSell_point((String) solrDocument.get(<span class="string">"item_sell_point"</span>));</span><br><span class="line">    <span class="comment">//取高亮显示</span></span><br><span class="line">    List&lt;String&gt; list = highlighting.get(solrDocument.get(<span class="string">"id"</span>)).get(<span class="string">"item_title"</span>);</span><br><span class="line">    String title = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">if</span> (list != <span class="keyword">null</span> &amp;&amp; list.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      title = list.get(<span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      title = (String) solrDocument.get(<span class="string">"item_title"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    item.setTitle(title);</span><br><span class="line">    <span class="comment">//添加到商品列表</span></span><br><span class="line">    itemList.add(item);</span><br><span class="line">  &#125;</span><br><span class="line">  result.setItemList(itemList);</span><br><span class="line">  <span class="comment">//返回结果</span></span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Service层	</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> SearchDao searchDao;</span><br><span class="line"><span class="function"><span class="keyword">public</span> SearchResult <span class="title">search</span><span class="params">(String keyword, <span class="keyword">int</span> page, <span class="keyword">int</span> rows)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		<span class="comment">//创建一个SolrQuery对象</span></span><br><span class="line">		SolrQuery query = <span class="keyword">new</span> SolrQuery();</span><br><span class="line">		<span class="comment">//设置查询条件</span></span><br><span class="line">		query.setQuery(keyword);</span><br><span class="line">		<span class="comment">//设置分页条件</span></span><br><span class="line">		<span class="keyword">if</span> (page &lt;=<span class="number">0</span> ) page =<span class="number">1</span>;</span><br><span class="line">		query.setStart((page - <span class="number">1</span>) * rows);</span><br><span class="line">		query.setRows(rows);</span><br><span class="line">		<span class="comment">//设置默认搜索域</span></span><br><span class="line">		query.set(<span class="string">"df"</span>, <span class="string">"item_title"</span>); <span class="comment">//df代表属性域，item_title指定搜索item_title这个域</span></span><br><span class="line">		<span class="comment">//开启高亮显示</span></span><br><span class="line">		query.setHighlight(<span class="keyword">true</span>);</span><br><span class="line">		query.addHighlightField(<span class="string">"item_title"</span>);</span><br><span class="line">		query.setHighlightSimplePre(<span class="string">"&lt;em style=\"color:red\"&gt;"</span>);</span><br><span class="line">		query.setHighlightSimplePost(<span class="string">"&lt;/em&gt;"</span>);</span><br><span class="line">		<span class="comment">//调用dao执行查询</span></span><br><span class="line">		SearchResult searchResult = searchDao.search(query);</span><br><span class="line">		<span class="comment">//计算总页数</span></span><br><span class="line">		<span class="keyword">long</span> recordCount = searchResult.getRecordCount();</span><br><span class="line">		<span class="keyword">int</span> totalPage = (<span class="keyword">int</span>) (recordCount / rows);</span><br><span class="line">		<span class="keyword">if</span> (recordCount % rows &gt; <span class="number">0</span>) </span><br><span class="line">			totalPage ++;</span><br><span class="line">		<span class="comment">//添加到返回结果</span></span><br><span class="line">		searchResult.setTotalPages(totalPage);</span><br><span class="line">		<span class="comment">//返回结果</span></span><br><span class="line">		<span class="keyword">return</span> searchResult;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="Solr集群搭建（SolrCloud）"><a href="#Solr集群搭建（SolrCloud）" class="headerlink" title="Solr集群搭建（SolrCloud）"></a>Solr集群搭建（SolrCloud）</h5><h6 id="首先搭建zookeeper集群"><a href="#首先搭建zookeeper集群" class="headerlink" title="首先搭建zookeeper集群"></a>首先搭建zookeeper集群</h6><p>至少搭建3个节点，伪分布式集群搭建</p>
-<p>1.创建solr-cloud目录  [root@weitao local]# mkdir solr-cloud/</p>
-<p>2.复制三份zookeeper到solr-cloud目录下</p>
-<p>cp -r /home/cxl/app/zookeeper-3.4.6     /usr/local/solr-cloud/zookeeper01</p>
-<p>cp -r /home/cxl/app/zookeeper-3.4.6     /usr/local/solr-cloud/zookeeper02</p>
-<p>cp -r /home/cxl/app/zookeeper-3.4.6     /usr/local/solr-cloud/zookeeper03</p>
-<p>3.进入zookeeper01目录，创建data目录     mkdir data   </p>
-<p>4.在data目录下创建myid文件，文件内容写1       vi myid</p>
-<p>5.进入zookeeper01的conf目录下，重命名zoo_sample.cfg为zoo.cfg，然后修改zoo.cfg</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//修改data所在路径和zookeeper启动服务的端口号</span></span><br><span class="line">dataDir=/usr/local/solr-cloud/zookeeper01/data <span class="comment">//前面创建的data目录</span></span><br><span class="line">clientPort=<span class="number">2181</span></span><br><span class="line"><span class="comment">//在文件的最后加上：</span></span><br><span class="line">server<span class="number">.1</span>=<span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">2881</span>:<span class="number">3881</span></span><br><span class="line">server<span class="number">.2</span>=<span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">2882</span>:<span class="number">3882</span></span><br><span class="line">server<span class="number">.3</span>=<span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">2883</span>:<span class="number">3883</span></span><br></pre></td></tr></table></figure>
-
-<p>6.按照上面3，4，5步骤依次配置修改另外两个zookeeper，注意修改myid为2和3；还有zoo.cfg的端口和data目录。</p>
-<p>7.编写一个可执行文件，执行zookeeper集群</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vi start-all.sh</span><br><span class="line">cd zookeeper01/bin</span><br><span class="line">./zkServer.sh start</span><br><span class="line">cd ../../</span><br><span class="line">cd zookeeper02/bin</span><br><span class="line">./zkServer.sh start</span><br><span class="line">cd ../../</span><br><span class="line">cd zookeeper03/bin</span><br><span class="line">./zkServer.sh start</span><br><span class="line">cd ../../</span><br></pre></td></tr></table></figure>
-
-<p>通过 chmod u+x start-all.sh 命令将start-all.sh 赋权限为可执行文件</p>
-<p>最后启动zookeeper集群 ./start-sll.sh</p>
-<p> zookeeper03/bin/zkServer.sh status  查看zookeeper状态</p>
-<h6 id="开始搭建solr集群"><a href="#开始搭建solr集群" class="headerlink" title="开始搭建solr集群"></a>开始搭建solr集群</h6><p>1.复制四份tomcat到solr-cloud目录下，分别修改四个tomcat的端口号</p>
-<p>2.复制之前搭建的单机版solr中的 tomcat/webapps/solr 到刚创建的每一个tomcat/webapp下</p>
-<p>3.复制之前搭建的单机版solr中的 solrhome 到刚创建的solr-cloud目录下，复制四份</p>
-<p>然后修改 每一个 tomcat/webapps/solr/WEB-INF/web.xml，去掉下面代码的注释，把四个Tomcat路径分别改为刚复制的solrhome01,solrhome02,solrhome03,solrhome04</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//01,02,03,04</span></span><br><span class="line">&lt;env-entry&gt;</span><br><span class="line">   &lt;env-entry-name&gt;solr/home&lt;/env-entry-name&gt;</span><br><span class="line">   &lt;env-entry-value&gt;/usr/local/solr-cloud/solrhome01&lt;/env-entry-value&gt;</span><br><span class="line">   &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;</span><br><span class="line">&lt;/env-entry&gt;</span><br></pre></td></tr></table></figure>
-
-<p>4.修改solr-cloud中每一个solrhome目录下的solr.xml</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//修改host,hostPort，host是solrhome所在的服务器地址,hostPort是端口号  </span></span><br><span class="line">&lt;solrcloud&gt;</span><br><span class="line">    &lt;str name="host"&gt;192.168.25.16&lt;/str&gt;</span><br><span class="line">    &lt;int name="hostPort"&gt;8180&lt;/int&gt;</span><br><span class="line">    &lt;str name="hostContext"&gt;$&#123;hostContext:solr&#125;&lt;/str&gt;</span><br><span class="line">    &lt;int name="zkClientTimeout"&gt;$&#123;zkClientTimeout:30000&#125;&lt;/int&gt;</span><br><span class="line">    &lt;bool name="genericCoreNodeNames"&gt;$&#123;genericCoreNodeNames:true&#125;&lt;/bool&gt;</span><br><span class="line"> &lt;/solrcloud&gt;</span><br></pre></td></tr></table></figure>
-
-<p>5.修改tomcat/bin目录下的catalina.sh 文件，关联solr和zookeeper。</p>
-<p>把此配置添加到配置文件中：</p>
-<p>JAVA_OPTS=”-DzkHost=192.168.25.16:2182,192.168.25.16:2183,192.168.25.16:2184”</p>
-<p>添加到opts下面，大概在236行</p>
-<p>6.进入 /usr/local/solr-4.10.3/example/scripts/cloud-scripts 目录</p>
-<p>让zookeeper统一管理配置文件。需要把solrhome/collection1/conf目录上传到zookeeper。上传任意一个solrhome中的conf下的配置文件即可。使用zookeeper客户端进行上传</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkcli.sh -zkhost <span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2181</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2182</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2183</span> -cmd upconfig -confdir /usr/local/solr-cloud/solrhome01/collection1/conf -confname myconf</span><br></pre></td></tr></table></figure>
-
-<p>7.通过zookeeper客户端连接集群</p>
-<p> ./zkCli.sh</p>
-<p>可以指定连接到哪个节点：[root@solrcloud bin]# ./zkCli.sh -server 192.168.25.67:2182</p>
-<p>8.启动四个tomcat</p>
-<p>编写一个可执行文件用于启动四个tomcat</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/solr-cloud/tomcat01/bin</span><br><span class="line">./startup.sh</span><br><span class="line">cd /usr/local/solr-cloud/tomcat02/bin</span><br><span class="line">./startup.sh </span><br><span class="line">cd /usr/local/solr-cloud/tomcat03/bin</span><br><span class="line">./startup.sh </span><br><span class="line">cd /usr/local/solr-cloud/tomcat04/bin</span><br><span class="line">./startup.sh</span><br></pre></td></tr></table></figure>
-
-<p>赋权限：chmod u+x start-tomcat-all.sh</p>
-<p>启动：./start-tomcat-all.sh </p>
-<p>查看启动日志: tail -f tomcat04/logs/catalina.out </p>
-<p>9.浏览器访问集群</p>
-<p>10.添加collection语句，直接在浏览器地址栏输入即可</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//192.168.25.154:8180/solr/admin/collections?action=CREATE&amp;name=collection2&amp;numShards=2&amp;replicationFactor=2</span></span><br></pre></td></tr></table></figure>
-
-<p>如果向索引库中添加数据，运行时出现找不到field的错误，需要把colllection1下的conf目录复制到collection2下，再用zookeeper客户端把conf上传到zookeeper中进行管理（<strong><em>一般情况下不需要这步，都是正常的</em></strong>）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkcli.sh -zkhost <span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2181</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2182</span>,<span class="number">192.168</span><span class="number">.25</span><span class="number">.67</span>:<span class="number">2183</span> -cmd upconfig -confdir /usr/local/solr-cloud/solrhome01/collection2/conf -confname myconf</span><br></pre></td></tr></table></figure>
-
-<p>11.删除不用的Collection</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//192.168.25.154:8180/solr/admin/collections?action=DELETE&amp;name=collection1</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="solr集群的使用"><a href="#solr集群的使用" class="headerlink" title="solr集群的使用"></a>solr集群的使用</h5><p>只需要更改xml配置文件，把单机版的连接改为集群版的即可，其他代码不变</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//application-solr.xml</span></span><br><span class="line">&lt;!-- 集群版solr服务 --&gt;</span><br><span class="line">&lt;bean id=<span class="string">"cloudSolrServer"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"org.apache.solr.client.solrj.impl.CloudSolrServer"</span>&gt;</span><br><span class="line">	&lt;constructor-arg name="zkHost" 		    			value="192.168.25.154:2181,192.168.25.154:2182,192.168.25.154:2183"&gt;&lt;/constructor-arg&gt;	</span><br><span class="line">	&lt;property name="defaultCollection" value="collection2"&gt;&lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -365,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/13/Solr%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/13/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -379,18 +315,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/17/jvm%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/13/nodejs-http/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          jvm笔记
+          nodejs-http
         
       </div>
     </a>
   
   
-    <a href="/2019/11/13/redis%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">redis安装和使用</div>
+    <a href="/2020/03/13/MongoDB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MongoDB常用命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -433,7 +369,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 Mr.Cheng
+    		&copy; 2020 Monsters
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

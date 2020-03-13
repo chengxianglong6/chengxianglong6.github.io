@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>redis安装和使用 | Hexo</title>
+  <title>nodejs-http | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="redis安装启动1.安装redis需要c语言的编译环境。如果没有gcc需要在线安装。 1yum install gcc-c++">
+  <meta name="description" content="node.js 的 http 模块http模块可以用来快捷创建一个服务器，代码如下">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redis安装和使用">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;13&#x2F;redis%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8&#x2F;index.html">
+<meta property="og:title" content="nodejs-http">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;13&#x2F;nodejs-http&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="redis安装启动1.安装redis需要c语言的编译环境。如果没有gcc需要在线安装。 1yum install gcc-c++">
+<meta property="og:description" content="node.js 的 http 模块http模块可以用来快捷创建一个服务器，代码如下">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-08T12:41:36.220Z">
+<meta property="og:updated_time" content="2020-03-13T04:05:30.014Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -48,7 +48,7 @@
 			<img src="/img/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Mr.Cheng</a></h1>
+		  <h1 class="header-author"><a href="/">Monsters</a></h1>
 		</hgroup>
 		
 
@@ -100,7 +100,7 @@
 				<img src="/img/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Mr.Cheng</h1>
+			  <h1 class="header-author js-header-author">Monsters</h1>
 			</hgroup>
 			
 			
@@ -140,126 +140,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-redis安装和使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-nodejs-http" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      redis安装和使用
+      nodejs-http
     </h1>
   
 
         
-        <a href="/2019/11/13/redis%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2019-11-13T09:58:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
+        <a href="/2020/03/13/nodejs-http/" class="archive-article-date">
+  	<time datetime="2020-03-13T04:05:03.270Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="redis安装启动"><a href="#redis安装启动" class="headerlink" title="redis安装启动"></a>redis安装启动</h5><p>1.安装redis需要c语言的编译环境。如果没有gcc需要在线安装。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
-
+        <h3 id="node-js-的-http-模块"><a href="#node-js-的-http-模块" class="headerlink" title="node.js 的 http 模块"></a>node.js 的 http 模块</h3><p>http模块可以用来快捷创建一个服务器，代码如下</p>
 <a id="more"></a>
 
-<p>2.把redis源码包上传到linux</p>
-<p>3.解压缩redis源码包</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxf redis.x.x</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.导入 http 模块</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.创建server</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.当客户端请求过来，会自动触发request的请求事件，然后执行第二个参数回调函数</span></span><br><span class="line"><span class="comment">// 回调函数中有两个参数</span></span><br><span class="line"><span class="comment">// request 请求对象</span></span><br><span class="line"><span class="comment">//   请求对象可以用来获取客户端的请求信息，比如 request.url 可以获取请求路径</span></span><br><span class="line"><span class="comment">// response 响应对象</span></span><br><span class="line"><span class="comment">//   响应对象可以用来给客户端发送响应信息</span></span><br><span class="line">server.on(<span class="string">'request'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">request,response</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'收到客户端请求,请求路径是：'</span>+request.url)</span><br><span class="line">  	<span class="comment">// response的write方法用来给客户端发送响应信息，必须以 end() 来结束响应，否则客户端会一直等待</span></span><br><span class="line">	<span class="comment">// response.write('hello nodejs');</span></span><br><span class="line">	<span class="comment">// response.end();</span></span><br><span class="line">  </span><br><span class="line">  	<span class="comment">// 上面的write方式比较麻烦，推荐更简单的方式，直接使用end方法</span></span><br><span class="line">	<span class="comment">// response.end('hello world');</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 服务器默认发送数据类型为utf8</span></span><br><span class="line">	<span class="comment">// 浏览器在不知道服务器发送数据是什么编码的情况下会使用操作系统的编码去解析数据</span></span><br><span class="line">	<span class="comment">// 中文操作系统的编码是GBK</span></span><br><span class="line">	<span class="comment">// 告诉浏览器发送的内容是什么编码格式来解决中文乱码</span></span><br><span class="line">	response.setHeader(<span class="string">'Content-Type'</span>,<span class="string">'text/plain; charset=utf-8'</span>);</span><br><span class="line">  	response.end(<span class="string">'hello 世界'</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//获取请求路径,端口号后面以 / 开头的路径</span></span><br><span class="line">	<span class="keyword">var</span> url = request.url;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(url === <span class="string">'/plain'</span>)&#123;</span><br><span class="line">		<span class="comment">// text/plain 表示发送的内容是普通文本</span></span><br><span class="line">		response.setHeader(<span class="string">'Content-Type'</span>,<span class="string">'text/plain; charset=utf-8'</span>);</span><br><span class="line">		response.end(<span class="string">'你好，世界'</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(url === <span class="string">'/html'</span>)&#123;</span><br><span class="line">		<span class="comment">// 如果要发送 html 格式的字符串，则用 text/html</span></span><br><span class="line">		response.setHeader(<span class="string">'Content-Type'</span>,<span class="string">'text/html; charset=utf-8'</span>);</span><br><span class="line">		response.end(<span class="string">'&lt;h1&gt;你好&lt;/h1&gt;'</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.在3000端口启动服务器</span></span><br><span class="line">server.listen(<span class="string">'3000'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'服务器启动成功，访问路径为localhost:3000'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>4.进入解压后的redis文件夹中，然后使用“<strong>make</strong>”命令编译</p>
-<p>5.安装redis</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> make install PREFIX=/usr/local/redis</span><br><span class="line"><span class="comment">//PREFIX指定redis要安装的目录</span></span><br></pre></td></tr></table></figure>
+<h3 id="ip和端口号"><a href="#ip和端口号" class="headerlink" title="ip和端口号"></a>ip和端口号</h3><ul>
+<li>ip地址用来定位计算机</li>
+<li>端口号用来定位具体的应用程序</li>
+<li>一切需要联网通信的软件都会占用一个端口号</li>
+<li>端口号的范围从 0-65536 之间</li>
+<li>在计算机中有一些默认端口号，最好不要使用<ul>
+<li>例如 http 服务的 80</li>
+</ul>
+</li>
+</ul>
 
-<p>6.启动redis</p>
-<p>前台启动：在redis的安装目录下直接启动redis-server（一直处于启动页面，如果退出将会终止redis，不推荐）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./redis-server</span><br></pre></td></tr></table></figure>
-
-<p>后台启动：（推荐）</p>
-<p>把redis-3.0.0/redis.conf（解压后的redis目录下）复制到/usr/local/redis/bin（redis的安装目录下）目录下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp redis.conf    /usr/local/redis/bin/</span><br></pre></td></tr></table></figure>
-
-<p>然后更改redis.conf文件，daemonize  no 改为 daemonize  yes</p>
-<p>（redis采用的是单进程多线程的模式。当redis.conf中选项daemonize设置成yes时，代表开启守护进程模式。在该模式下，redis会在后台运行，并将进程pid号写入至redis.conf选项pidfile设置的文件中，此时redis将一直运行，除非手动kill该进程。但当daemonize选项设置成no时，当前界面将进入redis的命令行界面，exit强制退出或者关闭连接工具(putty,xshell等)都会导致redis进程退出。<br>服务端开发的大部分应用都是采用后台运行的模式）</p>
-<p>最后就可以启动redis了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/redis-server redis.conf</span><br></pre></td></tr></table></figure>
-
-<p>7.查看redis进程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux|grep redis</span><br></pre></td></tr></table></figure>
-
-<p>8.redis客户端连接服务端</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//默认使用127.0.0.1 6379端口</span></span><br><span class="line">bin/redis-cli</span><br><span class="line"><span class="comment">//-h：连接的服务器的地址   -p：服务的端口号</span></span><br><span class="line">bin/redis-cli -h <span class="number">192.168</span><span class="number">.25</span><span class="number">.153</span> -p <span class="number">6379</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="Redis的五种基本数据类型"><a href="#Redis的五种基本数据类型" class="headerlink" title="Redis的五种基本数据类型"></a>Redis的五种基本数据类型</h5><p>redis是以 key / value 形式存储数据的，数据类型指的是value的数据类型</p>
-<p>redis中所有数据都是字符串类型</p>
-<p><strong>1.string</strong> </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">添加数据：set key1 value1 ；         获取数据：get key1</span><br><span class="line">把key1对应的值加<span class="number">1</span>: incr key1 ；      把key1对应的值减<span class="number">1</span>：decr key1</span><br></pre></td></tr></table></figure>
-
-<p><strong>2.hash</strong> </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">添加数据：hset hash1 field1 <span class="number">1</span>               获取数据：hget hash1 field1</span><br><span class="line">获取指定数据类型的所有键：hkeys hash1        获取指定数据类型的所有值：hvals hash1</span><br><span class="line">获取指定数据类型的所有键和值：hgetall hash1   删除键：hdel hash1 field1</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.list</strong> （可以重复，元素有放入顺序）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">从左开始添加数据：lpush list1 <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span>  <span class="comment">//添加完是6，5，4，3，2，1</span></span><br><span class="line">从右开始添加数据：rpush list1 a b c d e    <span class="comment">//添加完是 a,b,c,d,e</span></span><br><span class="line">查询list1所有值：lrange list1 <span class="number">0</span> -<span class="number">1</span> <span class="comment">//起始下标和结束下标 0 -1表示查询全部 6,5,4,3,2,1,a,b,c,d,e</span></span><br><span class="line">从最左边取一个值：lpop list1 <span class="comment">//取完值就没了，取完还剩 5,4,3,2,1,a,b,c,d,e </span></span><br><span class="line">从最右边取一个值：rpop list1 <span class="comment">//取完值就没了，取完还剩 5,4,3,2,1,a,b,c,d</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>4.set</strong>（没有顺序，不可以重复）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">添加数据：sadd set1 a b a b c d <span class="comment">//存入只有a b c d</span></span><br><span class="line">删除数据：srem set1 a</span><br><span class="line">查看数据：smembers set1 <span class="comment">// b c d</span></span><br><span class="line">sadd seta a b c d e   sadd seta c d e f g</span><br><span class="line">两列数据相减：sdiff seta setb <span class="comment">//得到a b</span></span><br><span class="line">取两列数据的交集：sinter seta setb <span class="comment">//得到 c d e</span></span><br><span class="line">取两列数据的并集：sunion seta  setb <span class="comment">//得到 a b c d e f g</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>5.sorted set</strong></p>
-<p>设置key的有效时间 ：expire key1 100 </p>
-<p>查看key的有效时间：ttl key1  </p>
-<p>ttl命令返回的数字如果是整数代表正在倒计时，如果是-1，代表该key是永久保存的，如果是-2代表key不存在</p>
-<h5 id="Redis搭建集群环境"><a href="#Redis搭建集群环境" class="headerlink" title="Redis搭建集群环境"></a>Redis搭建集群环境</h5><p>Redis集群中至少应该有三个节点。要保证集群的高可用，需要每个节点有一个备份机。</p>
-<p>所以Redis集群至少需要6台服务器。</p>
-<p>搭建伪分布式。可以使用一台虚拟机运行6个redis实例。需要修改redis的端口号7001-7006</p>
-<p>1，在usr/local目录下创建目录redis-cluster</p>
-<p>2，进入前面安装好的redis目录，复制bin目录到/usr/local/redis-cluster目录下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r bin /usr/local/redis-cluster/redis01</span><br></pre></td></tr></table></figure>
-
-<p>3，进入到复制好的redis01的bin目录，删除 dump.rdb 和 appendonly.aof 以保证节点是新的。然后修改redis.conf配置文件，修改port为7001；再<strong>去掉 #cluster-enabled yes 的注释</strong>(大约632行)，以便搭建集群</p>
-<p>4，按照2，3两个步骤，复制共六份，端口分别改为（7001，7002，7003，7004，7005，7006）</p>
-<p>5，编写一个批处理，让六个redis依次启动</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi start-all.sh</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//批处理的代码</span></span><br><span class="line">cd redis01</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis02</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis03</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis04</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis05</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br><span class="line">cd redis06</span><br><span class="line">./redis-server redis.conf</span><br><span class="line">cd ..</span><br></pre></td></tr></table></figure>
-
-<p>此时的 start-all.sh 文件只是一个普通的文件，通过下面的代码将它改为可执行文件</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod u+x start-all.sh</span><br></pre></td></tr></table></figure>
-
-<p>6，执行批处理文件，启动六个redis</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./start-all.sh</span><br></pre></td></tr></table></figure>
-
-<p><strong>安装运行环境</strong></p>
-<p>1，进入之前解压的redis-3.0.0目录，复制src目录下的 redis-trib.rb 到 redis-cluster 集群目录下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp redis-trib.rb /usr/local/redis-cluster/</span><br></pre></td></tr></table></figure>
-
-<p>2，使用ruby脚本搭建集群。需要在线安装ruby的运行环境：</p>
-<p>yum install ruby</p>
-<p>yum install rubygems</p>
-<p>3，要运行 redis-trib.rb 脚本需要安装ruby脚本运行使用的包。</p>
-<p>先把redis-3.0.0.gem传到linux中，然后进行安装：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install redis-<span class="number">3.0</span><span class="number">.0</span>.gem</span><br></pre></td></tr></table></figure>
-
-<p>4，安装完成之后就可以使用ruby脚本搭建集群了</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./redis-trib.rb create --replicas <span class="number">1</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7001</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7002</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7003</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7004</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7005</span> <span class="number">192.168</span><span class="number">.25</span><span class="number">.16</span>:<span class="number">7006</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="使用集群"><a href="#使用集群" class="headerlink" title="使用集群"></a>使用集群</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis01/redis-cli -p <span class="number">7001</span> -c</span><br><span class="line"><span class="comment">//-c：代表连接的是redis集群</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="java使用redis"><a href="#java使用redis" class="headerlink" title="java使用redis"></a>java使用redis</h5><p>首先需要导入jedis jar包</p>
-<p>spring 配置，单机版和集群不能共存，开发的时候一般用单机版，发布的时候用集群版</p>
-<p>JedisClientPool 和 JedisClientCluster 是两个工具类</p>
-<p>spring配置文件中：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 连接redis单机版 --&gt;</span><br><span class="line">&lt;bean id=<span class="string">"jedisClientPool"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.cxl.common.jedis.JedisClientPool"</span>&gt;</span><br><span class="line">	&lt;property name="jedisPool" ref="jedisPool"&gt;&lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line">&lt;bean id=<span class="string">"jedisPool"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"redis.clients.jedis.JedisPool"</span>&gt;</span><br><span class="line">	&lt;constructor-arg name=<span class="string">"host"</span> value=<span class="string">"192.168.25.16"</span>/&gt;</span><br><span class="line">	&lt;constructor-arg name=<span class="string">"port"</span> value=<span class="string">"6379"</span>/&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line">&lt;!-- 连接redis集群 --&gt;</span><br><span class="line">&lt;bean id=<span class="string">"jedisClientCluster"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.cxl.common.jedis.JedisClientCluster"</span>&gt;</span><br><span class="line">	&lt;property name=<span class="string">"jedisCluster"</span> ref=<span class="string">"jedisCluster"</span>/&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line">&lt;bean id=<span class="string">"jedisCluster"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"redis.clients.jedis.JedisCluster"</span>&gt;</span><br><span class="line">	&lt;constructor-arg name=<span class="string">"nodes"</span>&gt;</span><br><span class="line">		&lt;set&gt;</span><br><span class="line">			&lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"redis.clients.jedis.HostAndPort"</span>&gt;</span><br><span class="line">				&lt;constructor-arg name="host" value="192.168.25.162"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">				&lt;constructor-arg name="port" value="7001"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">			&lt;/bean&gt; </span><br><span class="line">			&lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"redis.clients.jedis.HostAndPort"</span>&gt;</span><br><span class="line">				&lt;constructor-arg name="host" value="192.168.25.162"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">				&lt;constructor-arg name="port" value="7002"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">			&lt;/bean&gt; </span><br><span class="line">			&lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"redis.clients.jedis.HostAndPort"</span>&gt;</span><br><span class="line">				&lt;constructor-arg name="host" value="192.168.25.162"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">				&lt;constructor-arg name="port" value="7003"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">			&lt;/bean&gt; </span><br><span class="line">			&lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"redis.clients.jedis.HostAndPort"</span>&gt;</span><br><span class="line">				&lt;constructor-arg name="host" value="192.168.25.162"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">				&lt;constructor-arg name="port" value="7004"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">			&lt;/bean&gt; </span><br><span class="line">			&lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"redis.clients.jedis.HostAndPort"</span>&gt;</span><br><span class="line">				&lt;constructor-arg name="host" value="192.168.25.162"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">				&lt;constructor-arg name="port" value="7005"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">			&lt;/bean&gt; </span><br><span class="line">			&lt;bean <span class="class"><span class="keyword">class</span></span>=<span class="string">"redis.clients.jedis.HostAndPort"</span>&gt;</span><br><span class="line">				&lt;constructor-arg name="host" value="192.168.25.162"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">				&lt;constructor-arg name="port" value="7006"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">			&lt;/bean&gt; </span><br><span class="line">		&lt;/set&gt;</span><br><span class="line">	&lt;/constructor-arg&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
-
-<p>查询业务，首先根据key查询redis缓存，如果缓存中有，直接转换为需要的数据类型然后返回。如果缓存中不存在数据，则查询之后放入redis缓存，最后返回。代码示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> List&lt;TbContent&gt; <span class="title">getContentList</span><span class="params">(<span class="keyword">long</span> id)</span> </span>&#123;</span><br><span class="line">  	<span class="comment">//查询redis缓存中是否存在数据</span></span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		String value=jedisClient.hget(CONTENT_LIST,id+<span class="string">""</span>);</span><br><span class="line">		<span class="keyword">if</span>(StringUtils.isNotEmpty(value))&#123;</span><br><span class="line">			List&lt;TbContent&gt; redisList= JsonUtils.jsonToList(value, TbContent<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">			System.out.println(<span class="string">"查询缓存得到的值"</span>);</span><br><span class="line">			<span class="keyword">return</span> redisList;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">		<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	TbContentExample example=<span class="keyword">new</span> TbContentExample();</span><br><span class="line">	Criteria criteria=example.createCriteria();</span><br><span class="line">	criteria.andCategoryIdEqualTo(id);</span><br><span class="line">	List&lt;TbContent&gt; list=contentMapper.selectByExampleWithBLOBs(example);</span><br><span class="line">	<span class="comment">//查询出来的数据向redis中添加</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">		jedisClient.hset(CONTENT_LIST, id+<span class="string">""</span>, JsonUtils.objectToJson(list));</span><br><span class="line">		System.out.println(<span class="string">"查出来向redis中添加!"</span>);</span><br><span class="line">	&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">		<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>增删改业务需要删除redis中相应的缓存以便实现<strong>缓存同步</strong></p>
-<p>示例代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> TaotaoResult <span class="title">addContent</span><span class="params">(TbContent content)</span> </span>&#123;</span><br><span class="line">	content.setCreated(<span class="keyword">new</span> Date());</span><br><span class="line">	content.setUpdated(<span class="keyword">new</span> Date());</span><br><span class="line">	contentMapper.insert(content);</span><br><span class="line">  	<span class="comment">//根据key删除redis中缓存以实现缓存同步</span></span><br><span class="line">	jedisClient.hdel(CONTENT_LIST, content.getCategoryId().toString());</span><br><span class="line">	<span class="keyword">return</span> TaotaoResult.ok();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
       
 
       
@@ -338,7 +254,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/13/redis%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/13/nodejs-http/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -352,17 +268,17 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/13/Solr%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/13/nodejs%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Solr服务搭建和使用
+          nodejs模块系统
         
       </div>
     </a>
   
   
-    <a href="/2019/11/13/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/03/13/nginx%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">nginx安装和使用</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -406,7 +322,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 Mr.Cheng
+    		&copy; 2020 Monsters
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
